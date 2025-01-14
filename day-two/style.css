@@ -36,3 +36,8 @@ h1 {
 .grid-item:hover {
   background-color: red;
 }
+iframe {
+  display: flex;
+  margin: 1rem auto;
+  border-radius: 10px;
+}
