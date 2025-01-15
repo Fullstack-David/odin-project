@@ -1,0 +1,21 @@
+A property is a "key:value" pair, where key is a string and value kan be anything
+
+
+
+An empty object (“empty cabinet”) can be created using one of two syntaxes:
+let user = new Object(); // "object constructor" syntax
+let user = {};  // "object literal" syntax
+
+let user = {     // an object
+  name: "John",  // by key "name" store value "John"
+  age: 30        // by key "age" store value 30
+};
+
+-- In the user object, there are two properties:
+The first property has the name "name" and the value "John".
+The second one has the name "age" and the value 30.
+
+
+
+-- Square brackets are much more powerful than dot notation. They allow any property names and variables. But they are also more cumbersome to write.
+So most of the time, when property names are known and simple, the dot is used. And if we need something more complex, then we switch to square brackets.

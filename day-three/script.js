@@ -34,7 +34,6 @@ function applyBackgroundColor(baseClass) {
       "grid_cell_blue",
       "grid_cell_green"
     );
-
     gridCell.classList.add(baseClass);
   });
 }
