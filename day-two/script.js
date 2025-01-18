@@ -1,4 +1,6 @@
 const container = document.getElementById("container");
+const btn = document.querySelector("button");
+
 function makeRows(rows, cols) {
   container.style.setProperty("--grid-rows", rows);
   container.style.setProperty("--grid-cols", cols);
@@ -10,6 +12,12 @@ function makeRows(rows, cols) {
   }
   const div = document.createElement("div");
   container.appendChild(div);
+}
+
+function askeUser() {
+  const numberOfSquars = prompt(
+    "Enter number of squeres per side for a new grid."
+  );
 }
 
 makeRows(2, 2);
