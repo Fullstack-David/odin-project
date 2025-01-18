@@ -18,6 +18,7 @@ h1 {
   font-size: 18px;
   border-radius: 5px;
 }
+
 #grid-button:hover {
   background-color: #4f97e4;
 }
@@ -45,7 +46,7 @@ h1 {
   border: 1px solid;
   display: flex;
   border-radius: 5px;
-} */
+}
 
 .grid_cell {
   background-color: #de8c8c;
@@ -53,7 +54,9 @@ h1 {
 }
 
 .buttons {
-  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 43%;
 }
 .yellow_btn {
   background-color: #ffc107;
@@ -101,10 +104,12 @@ h1 {
 .grid_cell_green {
   background-color: #28a745;
 }
-.grid_cell_hovered {
-  background-color: rgba(0, 0, 0, 0.5);
-}
 
-/* .baseClass {
-  background-color: blue;
-} */
+.grid_cell_hovered {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Slightly transparent to overlay the base color */
+/* } */
