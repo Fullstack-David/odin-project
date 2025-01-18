@@ -39,27 +39,19 @@ h1 {
   flex-wrap: wrap;
 }
 
-.grid-cell {
+/* .grid-cell {
   padding: 10px;
   color: white;
   border: 1px solid;
   display: flex;
   border-radius: 5px;
-}
-
-.grid_cell_hovered {
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /* Slightly transparent to overlay the base color */
-}
+} */
 
 .grid_cell {
-  background-color: #d4d4d4;
+  background-color: #de8c8c;
   border: 1px solid black;
 }
+
 .buttons {
   display: flex;
 }
@@ -109,3 +101,10 @@ h1 {
 .grid_cell_green {
   background-color: #28a745;
 }
+.grid_cell_hovered {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* .baseClass {
+  background-color: blue;
+} */

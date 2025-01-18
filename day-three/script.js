@@ -6,11 +6,11 @@ const greenBtn = document.querySelector(".green_btn");
 const blueBtn = document.querySelector(".blue_btn");
 
 function applyBackgroundColor(baseClass) {
-  const gridCells = document.querySelectorAll(".grid-cell");
+  const gridCells = document.querySelectorAll(".grid_cell");
   gridCells.forEach((gridCell) => {
     gridCell.classList.remove(
-      "grid_cell_blue",
       "grid_cell_yellow",
+      "grid_cell_blue",
       "grid_cell_green"
     );
     gridCell.classList.add(baseClass);
@@ -19,17 +19,14 @@ function applyBackgroundColor(baseClass) {
 
 yellowBtn.addEventListener("click", () => {
   applyBackgroundColor("grid_cell_yellow");
-  console.log("hej");
 });
 
 blueBtn.addEventListener("click", () => {
   applyBackgroundColor("grid_cell_blue");
-  console.log("hej");
 });
 
 greenBtn.addEventListener("click", () => {
   applyBackgroundColor("grid_cell_green");
-  console.log("hej");
 });
 
 gridBtn.addEventListener("click", () => {
@@ -42,10 +39,11 @@ gridBtn.addEventListener("click", () => {
 
     for (let i = 0; i < gridAmount * gridAmount; i++) {
       let gridCell = document.createElement("div");
-      gridCell.className = "grid-cell";
+      gridCell.className = "grid_cell";
       gridCell.style.width = `${cellSize}px`;
       gridCell.style.height = `${cellSize}px`;
       container.appendChild(gridCell);
+
       gridCell.addEventListener("mouseover", () => {
         gridCell.classList.add("grid_cell_hovered");
       });
@@ -54,8 +52,8 @@ gridBtn.addEventListener("click", () => {
 });
 
 clearBtn.addEventListener("click", () => {
-  const gridCells = document.querySelectorAll(".grid-cell");
+  const gridCells = document.querySelectorAll(".grid_cell");
   gridCells.forEach((gridCell) => {
-    gridCell.className = "gird_cell";
+    gridCell.className = "grid_cell";
   });
 });
