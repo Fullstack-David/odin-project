@@ -122,8 +122,7 @@ const seven = document.getElementById("seven");
 const eight = document.getElementById("eight");
 const nine = document.getElementById("nine");
 
-// Symbols even
-
+// Symbols-Event
 add.addEventListener("click", () => {
   if (checkOprator()) {
     display.textContent += "+";
@@ -174,6 +173,7 @@ clear.addEventListener("click", () => {
   decimal = false;
 });
 
+// Numbers-Event
 zero.addEventListener("click", () => {
   display.textContent += "0";
   setNumbers(0);
