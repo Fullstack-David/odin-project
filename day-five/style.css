@@ -36,6 +36,7 @@ h1 {
   color: white;
   overflow: hidden;
   display: flex;
+  gap: 20px;
   padding: 25px;
   border-radius: 10px;
   align-items: center;
