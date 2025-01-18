@@ -98,12 +98,28 @@ console.log(operate(substractNum, 10, 5));
 console.log(operate(multiplyNum, 10, 5));
 console.log(operate(divideNum, 10, 5));
 
-// ------------------------* Calculator Project ------------------------* //
+// -----------------* Calculator Project ----------------* //
 const container = document.querySelector(".container");
-const addNumber = document.querySelector(".add-number");
-const substractNumber = document.querySelector(".sub-number");
-const multiplyNumber = document.querySelector(".multiply-number");
-const divideNumber = document.querySelector(".devide-number");
-const equal = document.querySelector(".equal");
-const clear = document.querySelector(".clear");
 const display = document.querySelector(".display");
+
+// Symbols
+const add = document.getElementById("add");
+const substract = document.getElementById("substract");
+const multiply = document.getElementById("multiply");
+const divide = document.getElementById("devide");
+const equal = document.getElementById("equal");
+const clear = document.getElementById("clear");
+const dot = document.getElementById("dot");
+const backspace = document.getElementById("backspace");
+
+// Numbers
+const zero = document.getElementById("zero");
+const one = document.getElementById("one");
+const two = document.getElementById("two");
+const three = document.getElementById("three");
+const four = document.getElementById("four");
+const five = document.getElementById("five");
+const six = document.getElementById("six");
+const seven = document.getElementById("seven");
+const eight = document.getElementById("eight");
+const nine = document.getElementById("nine");
