@@ -1,36 +1,35 @@
-function addNum(a, b) {
-  return a + b;
+function addNum(num1, num2) {
+  return num1 + num2;
 }
 
-function substractNum(a, b) {
-  return a - b;
+function substractNum(num1, num2) {
+  return num1 - num2;
 }
 
-function multiplyNum(a, b) {
-  return a * b;
+function multiplyNum(num1, num2) {
+  return num1 * num2;
 }
 
-function divideNum(a, b) {
-  if (a === 0) {
+function divideNum(num1, num2) {
+  if (num1 === 0) {
     return "Error";
   }
-  return a / b;
+  return num1 / num2;
 }
 
-function operate(operator, a, b) {
-  // return operator(a, b);
+function operate(operator, num1, num2) {
   switch (operator) {
     case "+":
-      return addNum(a, b);
+      return addNum(num1, num2);
 
     case "-":
-      return substractNum(a, b);
+      return substractNum(num1, num2);
 
     case "*":
-      return multiplyNum(a, b);
+      return multiplyNum(num1, num2);
 
     case "/":
-      return divideNum(a, b);
+      return divideNum(num1, num2);
 
     default:
       break;
@@ -38,57 +37,57 @@ function operate(operator, a, b) {
 }
 
 let operator = "";
-let a = 0;
-let b = 0;
+let num1 = 0;
+let num2 = 0;
 let decimal = false;
 
 function setNumbers(num) {
-  if (!operator) {
-    return true;
+  if (operator === "") {
+    num1 += num;
+  } else {
+    num2 += num;
   }
-  return false;
 }
 
-function setOperators(operation) {
-  if (a && !operation) {
+function setOperator(operation) {
+  if (num1 && !operator) {
     operator = operation;
   }
+  decimal = false;
 }
 
 function checkOprator() {
   if (!operator) {
     return true;
   }
-
   return false;
 }
 
 function check() {
-  if (operator && a && b) {
+  if (operator && num1 && num2) {
     return true;
   }
-
   return false;
 }
 
 function checkDecimal() {
   if (!decimal && !operator) {
-    a += ".";
+    num1 += ".";
     display.textContent += ".";
     decimal = true;
   } else if (!decimal) {
-    b += ".";
+    num2 += ".";
     display.textContent += ".";
     decimal = true;
   }
 }
 
 function backSpace() {
-  if (!operator && a) {
+  if (!operator && num1) {
     display.textContent = display.textContent.toString().slice(0, -1);
-  } else if (op && !b) {
+  } else if (op && !num2) {
     display.textContent = display.textContent.toString().slice(0, -1);
-  } else if (op && b) {
+  } else if (op && num2) {
     display.textContent = display.textContent.toString().slice(0, -1);
   }
 }
@@ -97,6 +96,8 @@ console.log(operate(addNum, 10, 5));
 console.log(operate(substractNum, 10, 5));
 console.log(operate(multiplyNum, 10, 5));
 console.log(operate(divideNum, 10, 5));
+
+console.log(addNum(1, 3));
 
 // -----------------* Calculator Project ----------------* //
 const container = document.querySelector(".container");
@@ -123,3 +124,8 @@ const six = document.getElementById("six");
 const seven = document.getElementById("seven");
 const eight = document.getElementById("eight");
 const nine = document.getElementById("nine");
+
+zero.addEventListener("click", () => {
+  display.textContent += "0";
+  setOperator(0);
+});

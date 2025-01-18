@@ -37,7 +37,7 @@ h1 {
   overflow: hidden;
   display: flex;
   align-self: center;
-  padding: 15px 10px;
+  padding: 25px;
   margin-bottom: 1rem;
   border-radius: 10px;
 }
@@ -60,11 +60,6 @@ h1 {
   grid-row-end: 7;
 }
 
-.equal {
-  /* grid-column-start: 4;
-  grid-row-start: 3;
-  grid-row-end: 5; */
-}
 .zero {
   grid-column-start: -4;
 }
